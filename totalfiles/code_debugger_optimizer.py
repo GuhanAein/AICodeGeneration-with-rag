@@ -2,10 +2,10 @@ import streamlit as st
 import google.generativeai as genai
 import requests
 
-GENAI_API_KEY = "AIzaSyDoBjoSbfv0moLFvKOkf0aa8Nm3mpR6-Sk"
+GENAI_API_KEY = "AIzaSyDoBjoSbfvxxxxxxxxxxxxxxx"
 genai.configure(api_key=GENAI_API_KEY)
 SONARQUBE_URL = "http://localhost:9000/api/issues/search"
-SONARQUBE_TOKEN = "sqp_2c6d26ce9e656978d73c78b1a96a19be5a8122cd"
+SONARQUBE_TOKEN = "sqp_2c6d26ce9e656xxxxxxxx"
 
 def get_gemini_fix(code):
     model = genai.GenerativeModel("gemini-1.5-flash")
@@ -43,4 +43,5 @@ def run():
                 st.json(analysis_result)
             else:
                 st.warning("Please enter your code.")
+
 
