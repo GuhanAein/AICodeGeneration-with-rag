@@ -15,7 +15,7 @@ import streamlit as st
 from pyngrok import ngrok
 
 # Step 1: Log in to Hugging Face
-hf_token = "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"
+hf_token = "hf_HxMrjShCngjwGxxxxxxxxxxxxxxxx"
 login(hf_token)
 
 # Step 2: Load the Dataset
@@ -157,4 +157,5 @@ ngrok.set_auth_token("2u1dTdyOzldkQy1nwb0XrZb0f1I_ydMH7oJd97uqACjhvkE2")  # Repl
 
 # Create a public URL with ngrok
 public_url = ngrok.connect(8501)
+
 print(f"Access your Streamlit app here: {public_url}")
