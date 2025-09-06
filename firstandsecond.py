@@ -4,11 +4,11 @@ import ast
 import requests
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyDoBjoSbfv0moLFvKOkf0aa8Nm3mpR6-Sk")
+genai.configure(api_key="AIzaSyDoBjoSbfv0xxxxxxxxxxxx")
 
 # SonarQube API Configuration
 SONARQUBE_URL = "http://localhost:9000/api/issues/search"  # Ensure SonarQube is running
-SONARQUBE_TOKEN = "sqp_2c6d26ce9e656978d73c78b1a96a19be5a8122cd"
+SONARQUBE_TOKEN = "sqp_2c6d26ce9e656978dxxxxxxxxxxxxxxx"
 
 def get_gemini_fix(code):
     """Ask Gemini to analyze and fix the code."""
@@ -44,3 +44,4 @@ if st.button("Analyze with SonarQube"):
         st.write(analysis_result)
     else:
         st.warning("Please enter your code first.")
+
