@@ -4,12 +4,12 @@ import requests
 import json
 
 # 🔐 Configure Gemini API with your API Key
-GENAI_API_KEY = "AIzaSyDoBjoSbfv0moLFvKOkf0aa8Nm3mpR6-Sk"  # Your actual API Key
+GENAI_API_KEY = "AIzaSyDoBjoSbxxxxxxxxxxxxxxxx"  # Your actual API Key
 genai.configure(api_key=GENAI_API_KEY)
 
 # 🔐 SonarQube Configuration
 SONARQUBE_URL = "http://localhost:9000/api/issues/search"  # Ensure SonarQube is running
-SONARQUBE_TOKEN = "ssqp_7ba2e488355816ded966c468696b37985933afcf"  # Your SonarQube Token
+SONARQUBE_TOKEN = "ssqp_7ba2e48835581xxxxxxxxxxxxxxx"  # Your SonarQube Token
 
 def get_gemini_fix(code):
     """Ask Gemini AI to analyze and fix the code."""
@@ -60,3 +60,4 @@ if st.button("Analyze with SonarQube"):
     analysis_result = analyze_code_with_sonarqube()
     st.subheader("SonarQube Analysis:")
     st.json(analysis_result)  # Display JSON in readable format
+
